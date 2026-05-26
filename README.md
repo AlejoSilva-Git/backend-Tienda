@@ -1,43 +1,90 @@
-# backend-Tienda
-# 👕 FashionStore API - Backend para Tienda de Ropa
+# 🚀 Backend API - Node.js + Express + MongoDB
 
-API RESTful completa para una tienda de ropa, construida con **Node.js**, **Express**, **TypeScript** y **MongoDB**. Incluye autenticación JWT, gestión de productos, carrito de compras, órdenes, reseñas y más.
+API REST construida con **Node.js**, **Express**, **MongoDB** y **TypeScript**, siguiendo buenas prácticas como arquitectura modular, validaciones con Zod, documentación con Swagger y autenticación con JWT.
 
-## 🚀 Características
+---
 
-- ✅ **Autenticación JWT** (registro, login, roles: user/admin)
-- ✅ **CRUD de productos** (con stock por talla/color)
-- ✅ **Categorías** (organización de productos)
-- ✅ **Carrito de compras** (agregar/remover productos)
-- ✅ **Órdenes** (crear órdenes, historial, estados)
-- ✅ **Reseñas** (calificar productos, solo usuarios que compraron)
-- ✅ **Filtros y paginación** (precio, categoría, búsqueda)
-- ✅ **Validación con Zod**
-- ✅ **Documentación Swagger**
-- ✅ **Seguridad** (Helmet, CORS, rate limiting)
+## 📦 Tecnologías utilizadas
 
-## 📦 Tecnologías
+- Node.js
+- Express 5
+- MongoDB
+- TypeScript
+- JWT (jsonwebtoken) → Autenticación
+- bcrypt → Encriptación de contraseñas
+- Zod → Validación de datos
+- Swagger (OpenAPI) → Documentación de API
+- Helmet → Seguridad HTTP
+- CORS
+- Morgan → Logging
 
-| Tecnología | Versión | Propósito |
-|------------|---------|------------|
-| Node.js | 18+ | Runtime |
-| Express | 5.x | Framework web |
-| TypeScript | 5.x | Tipado estático |
-| MongoDB | 7.x | Base de datos |
-| JWT | 9.x | Autenticación |
-| Zod | 4.x | Validación |
-| Swagger | 6.x | Documentación |
+---
 
-## 📋 Requisitos Previos
-
-- Node.js 18 o superior
-- MongoDB (local o Atlas)
-- npm o yarn
-
-## 🔧 Instalación
-
-### 1. Clonar el repositorio
+## 📁 Estructura del proyecto
 
 ```bash
-git clone https://github.com/tu-usuario/fashionstore-api.git
-cd fashionstore-api
+src/
+│
+├── modules/
+│   ├── auth/
+│   ├── users/
+│   ├── projects/
+│   ├── tasks/
+│   └── comments/
+│
+├── config/
+├── middlewares/
+├── routes/
+├── database/
+└── server.ts
+```
+
+---
+
+## ⚙️ Instalación
+
+```bash
+git clone https://github.com/frappelab/backend.git
+cd backend
+npm install
+```
+
+## 🏃‍♂️ Ejecución
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🔐 Autenticación
+
+Usa JWT:
+
+```
+Authorization: Bearer <token>
+```
+
+---
+
+## 📚 Swagger
+
+```
+https://collaborate-ook5.onrender.com/api/v1/docs/
+```
+
+---
+
+## 📊 Scripts
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 👨‍💻 Autor
+
+Carlos Andrés Hernández Vega
